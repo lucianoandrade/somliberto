@@ -1,0 +1,30 @@
+.field {
+   display: flex;
+   flex-direction: column;
+   font-style: italic;  
+   .messageError {
+        font-size: 12px;
+        font-style: italic;
+        color: #e02020;
+        border-top: 1px solid #e02020;
+        padding-top: 5px;
+        margin-top: -1px;
+   }
+    .label {
+        position: absolute;
+        color: #888;
+        font-size: 12px;
+        font-style: normal;  
+        font-weight: 600;
+        margin-top: -15px;
+    }
+    input {
+        border: none;
+        border-bottom: 1px solid #979797;
+        padding: 15px 0;
+        background-color: #f9f9f9;
+    }
+    input::-webkit-input-placeholder {
+        font-size: 12px;
+    }
+}

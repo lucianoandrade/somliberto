@@ -1,0 +1,150 @@
+section {
+    margin-top: -3px;
+    .nicknameUser {
+        color: #fff;
+        display: flex;
+        line-height: 18px;
+        border-top: 3px solid transparent;
+        transition: all linear .2s;
+        font-size: 14px;
+        font-weight: 600;
+        padding-bottom: 10px;
+        cursor: pointer;
+
+        .dropdownIndicatorStyle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin-left: 10px;
+            cursor: pointer;
+
+               .arrowLineStyleLeft {
+                    display: block;
+                    width: 12px;
+                    height: 2px;
+                    background-color: #fff;
+                    transform: rotate(45deg);
+                    position: relative;
+                    left: 3px;
+                };
+
+                .arrowLineStyleRight {
+                    display: block;
+                    width: 12px;
+                    height: 2px;
+                    background-color: #fff;
+                    transform: rotate(-45deg);
+                    position: relative;
+                    right: 1px;
+                };
+        }
+    }
+    .isdrop {
+        display: none;
+        .dropUser {
+            width: 260px;
+            height: 175px;
+            border-radius: 4px;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5);
+            background-color: #ffffff;
+            position: absolute;
+            right: 75px;
+
+
+            .infoUser {
+                display: flex;
+                .avatarUser {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    margin: 20px 2px 0 20px;
+                }
+                .user{
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 20px;
+                    padding: 0 15px;
+                    .nameUser {
+                        width: 152px;
+                        height: 17px;
+                        font-family: Montserrat;
+                        font-size: 14px;
+                        font-weight: 600;
+                        color: #444444;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        margin-bottom: 6px;
+                    }
+                    .emailUser {
+                        width: 134px;
+                        height: 15px;
+                        font-family: Montserrat;
+                        font-size: 12px;
+                        font-weight: 600;
+                        color: #444444;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+            }
+
+            .linksUser {
+                display: flex;
+                flex-direction: column;
+                .border {
+                    border-top: solid 1px #cccccc;
+                    width: 258px;
+                    height: 1px;
+                    margin: 20px 0;
+                }
+                .userLinks {
+                    font-size: 14px;
+                    height: 40px;
+                    font-weight: 600;
+                    color: #444444;
+                    padding: 10px 40px;
+                    margin-top: -5px;
+                }
+                .userLinks:hover {
+                    border: none;
+                    background-color: #C00000;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+section:hover {
+    .nicknameUser {
+        .dropdownIndicatorStyle {
+            .arrowLineStyleLeft {
+                transform: rotate(-45deg);
+            };
+
+            .arrowLineStyleRight {
+                transform: rotate(45deg);
+            };
+        }
+    }
+    .isdrop {
+        display: flex;
+    }
+}
+
+.black {
+    .nicknameUser{
+        color: #111;
+        .dropdownIndicatorStyle {
+            .arrowLineStyleLeft , .arrowLineStyleRight {
+                background-color: #111;
+            }
+        }
+    }
+}

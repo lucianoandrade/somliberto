@@ -1,0 +1,55 @@
+$colorPrimary: #C00000;
+
+
+.loadingContainer{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #222;
+}
+.loadingContainerHome{
+  min-height: calc(100vh - 192px);
+}
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    position: relative;
+    margin: 0 auto;
+
+    .ring {
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        border: 5px solid;
+        border-radius: 50%;
+        animation: spin 1.1s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+        border-color: $colorPrimary transparent transparent transparent;
+
+        &:nth-child(1) {
+            animation-delay: -450ms;
+        }
+
+        &:nth-child(2) {
+            animation-delay: -400ms;
+        }
+
+        &:nth-child(3) {
+            animation-delay: -350ms;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    }
+
+}

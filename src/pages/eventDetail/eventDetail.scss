@@ -1,0 +1,201 @@
+@import "../../styles/fonts.scss";
+
+.container-evento {
+    width: 100%;
+    min-height: 800px;
+    background-color: #111111;
+
+    .destaque {
+        .imgDestaque {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 300px;
+            background-position: bottom;
+            background-repeat: no-repeat;
+            background-size: cover;
+            &::before{
+              content: "";
+              display: block;
+              height: 300px;
+              width: 100%;
+              z-index: 10;
+              position: absolute;
+              top: 0;
+              background: rgba(0, 0, 0, 0.3);
+            }
+            .imgDestaque-content{
+              display: flex;
+              max-width: 800px;
+              margin: auto 0;
+              justify-content: flex-start;
+              width: 100%;
+              h2{
+                font-size: 45px;
+                font-family: Montserrat;
+                max-width: 500px;
+                text-transform: uppercase;
+                font-weight: 300;
+                letter-spacing: 10px;
+                color: #ffffff;
+                z-index: 20;
+              }
+            }
+        }
+    }
+    .content {
+        width: 100%;
+        min-width: 280px;
+        max-width: 800px;
+        margin: 60px auto 0 auto;
+        color: #fff;
+
+        .voltar {
+            font-size: 14px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .artista {
+            font-size: 24px;
+            font-weight: bold;
+            padding: 15px 0;
+        }
+
+        .classificacao {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .descricao {
+            width: 100%;
+            padding: 20px 0 15px 0;
+            line-height: 1.38;
+        }
+
+        .date {
+            width: 100%;
+            min-width: 80px;
+            font-size: 30px;
+            font-weight: bold;
+            color: #c00000;
+        }
+
+        .title {
+            width: 100%;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 48px 0 0 0;
+        }
+
+        .iframe {
+            margin: 30px auto 90px;
+            width: 100%;
+            max-width: 880px;
+            min-width: 220px;
+            height: 450px;
+            opacity: 0.7;
+            background-color: #000000;
+        }
+    }
+    .infoData {
+        display: flex;
+        justify-content: center;
+        text-transform: uppercase;
+        align-items: center;
+        font-weight: bold;
+        line-height: 1.25;
+        color: #ffffff;
+        width: 100%;
+        height: 40px;
+        background-color: #eba80b;
+    }
+
+    .contador {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 110px;
+        background-position: center;
+        color: #fff;
+    }
+    .vazio {
+        background-color: #111111;
+        height: 110px;
+    }
+}
+.headerPlayer{
+  width: 100%;
+  height: 600px;
+  .player{
+    height: 100%;
+  }
+}
+#event-player{
+  height: 600px!important;
+  img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+
+@media (max-width: 599px) {
+  .headerPlayer{
+    height: 320px;
+  }
+  #event-player{
+    height: 320px!important;
+  }
+  .container-evento{
+    min-height: auto;
+    .content{
+      padding: 0 30px;
+      margin-top: 30px;
+
+      .date {
+        font-size: 20px;
+      }
+      .descricao {
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      .title {
+        font-size: 20px;
+        padding-top: 25px;
+      }
+
+      .iframe {
+        height: auto;
+        margin-bottom: 30px;
+      }
+    }
+    .vazio {
+      height: 10px;
+    }
+    .destaque{
+
+      .imgDestaque {
+        height: 350px;
+        .imgDestaque-content{
+          height: 100%;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          padding: 0px 20px;
+          h2{
+            line-height: auto;
+            font-size: 35px;
+          }
+        }
+        &::before{
+          height: 350px;
+        }
+      }
+    }
+  }
+}

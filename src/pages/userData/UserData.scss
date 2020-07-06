@@ -1,0 +1,208 @@
+.container-userData{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 800px;
+    background-color: #f9f9f9;
+    padding: 112px 0;
+
+    .userData {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border: none;
+
+        .title {
+            color:#444;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            max-width: 535px;
+            min-width: 318px;
+
+            h3 {
+                font-size: 18px;
+                font-weight: bold;
+                color: #444444;
+                margin-bottom: 20px;
+            }
+
+            .personalData {
+                display: flex;
+                flex-direction: column;
+                .twoFields {
+                    display: flex;
+                    .field {
+                        margin: 25px 0;
+                        margin-right: 40px;
+                       .input {
+                        max-width: 310px;
+                       }
+                        #cpf {
+                           max-width: 180px;
+                       }
+                    }
+                }
+            }
+
+            .address {
+                display: flex;
+                flex-direction: column;
+                .twoFieldstwo {
+                    display: flex;
+                    .field {
+                        margin: 25px 0;
+                       .input {
+                        max-width: 310px;
+                       }
+                        #address_state {
+                            max-width: 180px;
+                        }
+
+                        #address_complement {
+                           max-width: 310px;
+                       }
+                    }
+                }
+                select {
+                    border: none;
+                    border-bottom: 1px solid #979797;
+                    color: #666666;
+                    margin: 25px 40px 0 0;
+                    background-color: transparent;
+                    width: 155px;
+                    max-width: 155px;
+                }
+                .threefields {
+                    display: flex;
+                    .field {
+                        margin: 25px 0;
+                        .input {
+                        max-width: 155px;
+                        margin-right: 35px;
+                        }
+                    }
+
+                }
+            }
+
+            .field {
+                margin: 25px 0;
+               .input {
+                width: 535px;
+               }
+            }
+
+            .check {
+                display: flex;
+                .field {
+                    margin: auto 5px auto 0;
+                   .input {
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 3px;
+                    border: solid 1px #979797;
+                    zoom: 1.1;
+                   }
+                }
+            }
+
+            .btn {
+                text-align: center;
+                max-width: 320px;
+                width: 100%;
+                margin: 30px auto;
+            }
+        }
+    }
+}
+
+@media (max-width:  599px) {
+    .container-userData{
+        .userData {
+            .title {
+            }
+
+            .form {
+                display: flex;
+                flex-direction: column;
+                max-width: 300px;
+                min-width: 200px;
+
+                .personalData {
+                    display: flex;
+                    flex-direction: column;
+                    .twoFields {
+                        display: block;
+                        .field {
+                           .input, #cpf {
+                            max-width: 300px;
+                            margin: 0px;
+                           }
+                        }
+                    }
+                }
+
+                .address {
+                    display: flex;
+                    flex-direction: column;
+                    .twoFieldstwo {
+                        display: block;
+                        .field {
+                           .input {
+                            max-width: 300px;
+                            margin: 0px;
+                           }
+                            #address_street, #address_complement {
+                               max-width: 300px;
+                           }
+                        }
+                    }
+                    .threefields {
+                        display: block;
+                        .field {
+                            .input {
+                            max-width: 300px;
+                            margin: 0px;
+                            }
+                        }
+                    }
+                }
+
+                .field {
+                   .input {
+                    width: 300px;
+                   }
+                }
+
+                .check {
+                    display: flex;
+                    .field {
+                        margin: auto 5px auto 0;
+                       .input {
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 3px;
+                        border: solid 1px #979797;
+                        zoom: 1.1;
+                       }
+                    }
+                }
+
+                .btn {
+                    text-align: center;
+                    max-width: 180px;
+                    width: 100%;
+                    margin: 30px auto;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+.countDownWrapper{
+  display: flex;
+  flex-direction: column;
+
+  &.visible {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s linear;
+  }
+  &.hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 2s, opacity 2s linear;
+  }
+}
+.countDown {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 60px;
+
+    .tempo {
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+        width: 60px;
+        font-size: 10px;
+        font-weight: 600;
+        margin: 0 10px;
+        p {
+            font-size: 36px;
+            font-weight: 600;
+        }
+    }
+    .ponto{
+      display: flex;
+      font-size: 30px;
+      justify-content: center;
+      align-items: center;
+    }
+
+}
+.children-wrapper{
+  width: 100%;
+}

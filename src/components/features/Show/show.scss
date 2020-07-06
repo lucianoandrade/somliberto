@@ -1,0 +1,128 @@
+#ShowDestaque {
+    background-color: #222;
+    // position: relative;
+    margin: auto 0;
+    .imgDestaque {
+        // display: block;
+        width: 100%;
+        display: block;
+        height: 600px;
+        img, source {
+            // display: block;
+            width: 100%;
+        }
+        .imgBg{
+          height: 100%;
+        }
+
+        &:before {
+          content: "";
+          display: block;
+          height: 600px;
+          width: 100%;
+          z-index: 10;
+          position: absolute;
+          top: 0;
+          background: rgba(0, 0, 0, 0.6)
+        }
+      &.no-partners{
+        height: calc(100vh - 192px);
+        &:before{
+          height: calc(100vh - 192px);
+        }
+      }
+    }
+    .call-to-action{
+      position: absolute;
+      z-index: 12;
+      top: 180px;
+      color: #fff;
+      max-width: 450px;
+      width: 100%;
+      left: 50%;
+      margin-left: -460px;
+      text-align: center;
+      .call-to-action-text{
+        font-size: 38px;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 15px;
+        text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+      }
+      .btn{
+        margin-top: 40px;
+         min-width: 280px;
+      }
+    }
+}
+
+@media (max-width: 920px) {
+    #ShowDestaque {
+
+
+    }
+}
+
+@media (max-width: 599px) {
+    .showWrapper{
+      height: 550px;
+      display: flex;
+      flex-direction: column;
+      background: #101010;
+
+    }
+    #ShowDestaque {
+        .imgDestaque {
+          height: 550px;
+            min-height: auto;
+            // max-height: 355px;
+            // padding-bottom: 67px;
+            background: #101010;
+            display: block;
+            &:before {
+              height: 70vh
+            }
+            &:after {
+              content: "";
+              display: block;
+              height: 185px;
+              margin-top: -184px;
+              z-index: 10;
+              position: relative;
+              background: rgb(16,16,16);
+              background: linear-gradient(180deg, rgba(16,16,16,0) 0%, rgba(16,16,16,1) 59%);
+            }
+            &.no-partners{
+              height: 550px;
+              .BgImgMb{
+                height: 550px;
+              }
+              &:before {
+                height: 550px;
+              }
+            }
+            .imgBg{
+              display: none;
+            }
+            .BgImgMb{
+              height: 70vh;
+              object-fit: cover;
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-position: center;
+              display: block;
+            }
+            .call-to-action{
+              top: 35%;
+              left: 0;
+              max-width: 100%;
+              margin-left: 0;
+              padding: 0 20px;
+              .call-to-action-text{
+                font-size: 24px;
+              }
+            }
+        }
+
+    }
+}
